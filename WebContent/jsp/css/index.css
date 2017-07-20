@@ -1,0 +1,352 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);/* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('CenturyGothic.eot?#iefix') format('embedded-opentype'),  url('CenturyGothic.woff') format('woff'), url('CenturyGothic.ttf')  format('truetype'), url('CenturyGothic.svg#CenturyGothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+*           { box-sizing: content-box; position: relative;}
+html        { width: 100%; height: 100%; } 
+
+body {
+    background: url('../img/background/home.png') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family:'CenturyGothic', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+.myapp              { width: 100%; height: 100%; background-color:  rgba(0,0,0,0.4); position: fixed; top: 0px;}
+p                   { display: inline-block;}
+.clearFix           { clear: both;}
+.floatRight         { float: right; margin-right: 30px;}
+.clickable          { cursor: pointer; cursor: hand}
+.hide               { display: none;}
+.whiteBackground    { background-color: #fff !important;}
+
+.home               { padding-top: 70px; padding-bottom: 70px; vertical-align: middle; margin: 0 auto;}
+.home h1            { color: #FFFFFF; padding-top: 50px; font-size: 40px; padding-bottom: 30px;  }
+.home > div> a      { background: url(../img/buttonback.png); padding: 15px 40px; font-size: 19px; width: 250px; height: 29px; display: block; box-sizing: content-box; margin-bottom: 20px; color: #80470a; text-decoration: none; font-weight: bold;}
+
+
+.template           { /* padding-left: 10px !important; */ /* padding-right: 10px !important; */}
+nav.small           { background: #71ba35; padding: 0px 0px;}
+nav.small > div.topmenu         { padding: 10px;}
+nav.small > div > div           { display: inline-block; vertical-align: top; color: #FFFFFF; font-weight: bold; font-size: 21px;}
+nav.small > div > div.title     { padding-left: 5px; text-transform: uppercase;}
+nav.small > div > div.titlelg   { font-size: 22px;}
+nav.small > div > div.searchbox { padding-left: 5px; text-transform: uppercase;}
+nav.small > div > div.menu      { padding-top: 3px; }
+nav.small > div > div.search    { float: right; padding-right: 15px; }
+nav.small > div > div.setting   { float: right; }
+nav.small > div > div .address  { font-size: 12px; color: #dbf8c3; }
+nav.small > div > div.back      { padding-top: 3px; }
+nav.small .submenu              { display: none; background: #71b004; }
+nav.small .submenu .address     { font-size: 12px; color: #dbf8c3; }
+nav.small .submenu > a          { display: block; padding: 10px 0px; text-decoration: none; font-size: 18px; padding-left: 40px; color: #fff; box-sizing: border-box;}   
+nav.small .submenu .menusearch  { width: 90%; padding: 10px; position: relative; font-size: 14px; box-sizing: border-box; background-color: #caf1aa; border: 1px solid #66b526;}
+
+
+
+.consumer                   { min-height: 100%; background-color: #f7f7f7; padding-bottom: 30px;}
+.consumer .banner           { height: 250px; background: url('../img/background/home.png') no-repeat; min-height: 100px; background-size: cover; background-position: bottom;}
+.consumer .banner > div     { width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); }
+.consumer .banner h1        { padding-top: 20%; text-align: center; color: #ffffff;}
+.consumer .banner .currentdate          { color: #ffffff; padding-top: 10px; font-size: 18px;}
+
+
+.provider                   { min-height: 100%; background-color: #f7f7f7; padding-bottom: 30px;}
+.provider .banner           { height: 250px; background: url('../img/background/home.png') no-repeat; min-height: 100px; background-size: cover; background-position: bottom;}
+.provider .banner > div     { width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); }
+.provider .banner h1        { padding-top: 20%; text-align: center; color: #ffffff;}
+.provider .banner .currentdate          { color: #ffffff; padding-top: 10px; font-size: 18px;}
+
+
+.consumer .sbanner           { height: 150px; background: url('../img/background/home.png') no-repeat; min-height: 100px; background-size: cover; background-position: bottom;}
+.consumer .sbanner > div     { width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); }
+.consumer .sbanner h1        { padding-top: 10%; text-align: center; color: #ffffff;}
+.consumer .sbanner .currentdate          { color: #ffffff; padding-top: 10px; font-size: 18px;}
+
+.provider .sbanner           { height: 150px; background: url('../img/background/home.png') no-repeat; min-height: 100px; background-size: cover; background-position: bottom;}
+.provider .sbanner > div     { width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); }
+.provider .sbanner h1        { padding-top: 10%; text-align: center; color: #ffffff;}
+.provider .sbanner .currentdate          { color: #ffffff; padding-top: 10px; font-size: 18px;}
+
+
+.provider .coptions                     { padding: 20px; padding-top: 20px; }
+.provider .coptions h1                  { font-weight: bold; padding-bottom: 15px;}
+.provider .coptions .displayOptions > a         { text-decoration: none; margin-bottom: 10px; display: block;}
+.provider .coptions .displayOptions > a > div   { min-height: 119px; width: 100%; background-color: #fff; padding: 10px; box-sizing: border-box; /* position: relative; */ /* border-bottom: 2px solid #dedede; */ border-right: 1px solid #dedede; /* margin-top: 10px; */  color: #000000;}
+.provider .coptions .displayOptions .left           { float: left; width: 90px; }
+.provider .coptions .displayOptions .right          { float: right; width: 70%;}
+.provider .coptions .displayOptions .left img       { margin-top: 15px;}
+.provider .coptions .displayOptions .right h2       { padding: 0px; margin: 0px; padding-bottom: 5px; padding-top: 5px;}
+.provider .coptions .displayOptions .right span     { line-height: 150%;}
+
+
+.provider .map             { height: 300px; width: 100%; box-sizing: border-box; background-color: #fff; border-bottom: 2px solid #e1e1e1}
+.provider .listing                     { padding-top: 10px; margin-bottom: 40px;}
+.provider .listing h1                  { padding-bottom: 20px;}
+.provider .listing .lprovider           { width: 95%; margin: 5px auto; background-color: #fff; min-height: 100px; border-bottom: 2px solid #e2e2e2; margin-bottom: 15px;}
+.provider .listing .lprovider > div:first-child    { border-bottom: 1px solid #f7f7f7; min-height: 95px; padding: 10px; box-sizing: border-box; padding-bottom: 5px;}
+.provider .listing .lprovider > div:last-child    { border-bottom: 1px solid #f7f7f7; height: 55px; padding: 10px; box-sizing: border-box; padding-bottom: 5px;}
+.provider .listing .lprovider .pinfo              { padding-bottom:  0px; margin: 0px;}
+.provider .listing .lprovider .pinfo .img         { float: left; margin: 0px; padding: 0px; width: 100px;}
+
+.provider .listing .lprovider .pdetails             { display: inline-block; padding-left: 10px; box-sizing:  border-box; width: auto; box-sizing: border-box;}
+.provider .listing .lprovider .pdetails h3          { padding: 0px; margin: 0px; text-transform: uppercase; font-size: 16px; color: #71ba35; padding-bottom: 5px;}
+.provider .listing .lprovider .pdetails span        { font-size: 14px;}
+.provider .listing .lprovider .pdetails > div       { font-size: 14px; padding-top: 10px; color: #8f8f8f;}
+
+.provider .listing .lprovider .pmenu > a            { display: inline-block; margin-left: 3px; margin-right: 3px;}
+.provider .listing .lprovider .pmenu > a.book       { font-size: 15px; text-decoration: none; color: #fff; background-color: #71ba35; padding: 5px 15px; border-radius: 5px;}
+.provider .listing .lprovider .pmenu > a.call       { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px; background-position: 5px 5px; background-repeat: no-repeat; padding-left: 10px;}
+.provider .listing .lprovider .pmenu > a.like       { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px; background-image: url(../img/like.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+.provider .listing .lprovider .pmenu > a.comment    { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px;  background-image: url(../img/comment.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+
+.provider .addmenu                                  { padding: 10px; background-color: #abda85; display: block; width: 90%; font-size: 15px; color: #000; font-weight: bold; text-decoration: none;}
+.provider .markdelivery                             { padding: 10px; background-color: #abda85; display: block; width: 90%; font-size: 15px; color: #000; font-weight: bold; text-decoration: none;}
+.provider .coptions  > form > div                   { font-size: 15px; padding-bottom: 5px; padding-top: 10px;}
+.provider .coptions  input[type=text]               { font-size: 14px; padding: 10px 5px; width: 100%; border: 1px solid #ececec; border-radius: 5px;}
+.provider .coptions  select                         { font-size: 14px; padding: 10px 5px; width: 100%; border: 1px solid #ececec; border-radius: 5px;}
+.provider .coptions  textarea                       { font-size: 14px; padding: 10px 5px; width: 100%; border: 1px solid #ececec; border-radius: 5px;}
+.provider .coptions .minheightauto > a > div        { min-height: 50px !important; font-size: 14px;}
+.provider .coptions .seacrhcrit                     { width: 95%; padding-bottom: 10px;}
+.provider .map                                      { height: 200px; width: 100%; box-sizing: border-box; background-color: #fff; border-bottom: 2px solid #e1e1e1}
+.provider .status                                   { background-color: #fff; border-radius: 5px; padding: 10px;}
+
+.consumer .coptions                     { padding: 20px; padding-top: 40px; }
+.consumer .coptions h1                  { font-weight: bold; padding-bottom: 15px;}
+.consumer .coptions .displayOptions > a         { text-decoration: none;}
+.consumer .coptions .displayOptions > a > div   { min-height: 119px; width: 100%; background-color: #fff; padding: 10px; box-sizing: border-box; /* position: relative; */ /* border-bottom: 2px solid #dedede; */ border-right: 1px solid #dedede; /* margin-top: 10px; */  color: #000000;}
+.consumer .coptions .displayOptions .left           { float: left; width: 90px; }
+.consumer .coptions .displayOptions .right          { float: right; width: 70%;}
+.consumer .coptions .displayOptions .left img       { margin-top: 15px;}
+.consumer .coptions .displayOptions .right h2       { padding: 0px; margin: 0px; padding-bottom: 5px; padding-top: 5px;}
+.consumer .coptions .displayOptions .right span     { line-height: 150%;}
+
+.consumer .coptions .wallet                         { min-height: 70px; padding: 10px; width: 100%;  background: url(../img/smallWallet.png) top left no-repeat; background-color: #c0e6a1;  color: #26AE60; font-size: 17px; padding-left: 75px; border-radius: 5px; box-sizing: border-box; font-weight: bold; padding-right: 30px; margin-bottom: 20px;}
+.consumer .coptions a                               { display: block; padding-top: 10px; font-size: 14px; color: #000; padding-bottom: 10px; text-decoration: none; font-weight: normal;}
+.consumer .coptions .minheightauto > a > div        { min-height: 50px !important;}
+
+
+
+.pagesearch                     { min-height: 100%; background-color: #f7f7f7; padding-bottom: 30px;}
+.searchContent .category        { height: 54px; box-sizing: border-box; background-color: #fff; box-shadow: 0px 2px 3px #e1e1e1; z-index: 1}
+.searchContent .category a      { display: inline-block; text-transform: uppercase; text-decoration: none; color: #8e8e8e; font-size: 16px; font-weight: bold; width: 32%; padding: 15px 0px; text-align: center;}
+.searchContent .category a.active   { color: #71ba35;}
+
+.searchContent .textsearch      { height: 54px; box-sizing: border-box; background-color: #fff; z-index: 1; display: none;}
+.searchContent .textsearch .searchbox   { background-color: #caf1aa; border: 1px solid #66b526; padding: 15px; font-size: 18px; color: #71ba35; width: 100%; box-sizing:  border-box;}
+
+.searchContent .map             { height: 300px; width: 100%; box-sizing: border-box; background-color: #fff; border-bottom: 2px solid #e1e1e1}
+.searchContent .listing                     { padding-top: 10px; margin-bottom: 40px;}
+.searchContent .listing h1                  { padding-bottom: 20px;}
+.searchContent .listing .provider           { width: 95%; margin: 5px auto; background-color: #fff; min-height: 190px; border-bottom: 2px solid #e2e2e2; margin-bottom: 15px;}
+.searchContent .listing .provider > div:first-child    { border-bottom: 1px solid #f7f7f7; min-height: 123px; padding: 10px; box-sizing: border-box; padding-bottom: 5px;}
+.searchContent .listing .provider > div:last-child    { border-bottom: 1px solid #f7f7f7; height: 55px; padding: 10px; box-sizing: border-box; padding-bottom: 5px;}
+.searchContent .listing .provider .pinfo              { padding-bottom:  0px; margin: 0px;}
+.searchContent .listing .provider .pinfo .img         { float: left; margin: 0px; padding: 0px;}
+
+.searchContent .listing .provider .pdetails             { display: inline-block; padding-left: 10px; box-sizing:  border-box; width: 55%;}
+.searchContent .listing .provider .pdetails h3          { padding: 0px; margin: 0px; text-transform: uppercase; font-size: 18px; color: #71ba35; padding-bottom: 5px;}
+.searchContent .listing .provider .pdetails span        { font-size: 15px;}
+.searchContent .listing .provider .pdetails > div       { font-size: 16px; padding-top: 10px; color: #8f8f8f;}
+
+.searchContent .listing .provider .pmenu > a            { display: inline-block; margin-left: 3px; margin-right: 3px;}
+.searchContent .listing .provider .pmenu > a.book       { font-size: 15px; text-decoration: none; color: #fff; background-color: #71ba35; padding: 5px 15px; border-radius: 5px;}
+.searchContent .listing .provider .pmenu > a.call       { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px; background-image: url(../img/call.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+.searchContent .listing .provider .pmenu > a.like       { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px; background-image: url(../img/like.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+.searchContent .listing .provider .pmenu > a.comment    { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px;  background-image: url(../img/comment.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+
+.consumer .doptions                         { padding: 0px 0px; padding-bottom: 40px; background-color: #fff; }
+.consumer .doptions .menuoption             { height: 54px; box-sizing: border-box; background-color: #fff; box-shadow: 0px 2px 3px #e1e1e1; z-index: 1; }
+.consumer .doptions .menuoption a           { display: inline-block; text-transform: uppercase; text-decoration: none; color: #8e8e8e; font-size: 16px; font-weight: bold; width: 32%; padding: 15px 0px; text-align: center;}
+.consumer .doptions .menuoption a.active    { color: #71ba35;}
+
+.consumer .doptions p                       { font-size: 15px; line-height: 150%;}
+.consumer .doptions .allpanel               { padding: 20px; }
+
+.consumer .doptions .allpanel               { min-height: 300px;}
+.consumer .doptions .aboutus a              { display: inline-block; margin-right: 10px; margin-left: 10px; font-size: 15px; color: #fff; padding: 10px 20px; background-color: #71ba35; border-radius: 5px;}
+.consumer .doptions .aboutus .comments      { background-color: #f7f7f7; padding: 5px; font-size: 14px; line-height: 150%; border: 1px solid #ececec; margin-bottom: 5px;}
+
+
+.cartdetails .listing                     { padding-top: 10px; margin-bottom: 10px; }
+.cartdetails .listing h1                  { padding-bottom: 20px;}
+.cartdetails .listing .provider           { width: 100%; margin: 5px auto; background-color: #fff; min-height: 190px; margin-bottom: 15px;}
+.cartdetails .listing .provider > div:first-child    { border: 1px solid #f7f7f7; min-height: 123px; padding: 10px; box-sizing: border-box; padding-bottom: 5px;}
+.cartdetails .listing .provider > div:last-child    { border-right: 1px solid #f7f7f7; border-bottom: 1px solid #f7f7f7; border-left: 1px solid #f7f7f7; height: 55px; padding: 10px; box-sizing: border-box; padding-bottom: 5px;}
+.cartdetails .listing .provider .pinfo              { padding-bottom:  0px; margin: 0px;}
+.cartdetails .listing .provider .pinfo .img         { float: left; margin: 0px; padding: 0px;}
+
+.cartdetails .listing .provider .pdetails             { display: inline-block; padding-left: 10px; box-sizing:  border-box; width: 55%;}
+.cartdetails .listing .provider .pdetails h3          { padding: 0px; margin: 0px; text-transform: uppercase; font-size: 18px; color: #71ba35; padding-bottom: 5px;}
+.cartdetails .listing .provider .pdetails span        { font-size: 15px;}
+.cartdetails .listing .provider .pdetails > div       { font-size: 16px; padding-top: 10px; color: #8f8f8f;}
+
+.cartdetails .listing .provider .pmenu > a            { display: inline-block; margin-left: 3px; margin-right: 3px;}
+.cartdetails .listing .provider .pmenu > a.book       { font-size: 15px; text-decoration: none; color: #fff; background-color: #71ba35; padding: 5px 15px; border-radius: 5px;}
+.cartdetails .listing .provider .pmenu > a.block      { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px; padding-left: 15px;}
+.cartdetails .listing .provider .pmenu > a.delete     { font-size: 15px; text-decoration: none; color: #fff; background-color: #e0590b; padding: 5px 15px; border-radius: 5px; padding-left: 15px; float: right;}
+.cartdetails .listing .provider .pmenu > a.call       { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px; background-image: url(../img/call.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+.cartdetails .listing .provider .pmenu > a.like       { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px; background-image: url(../img/like.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+.cartdetails .listing .provider .pmenu > a.comment    { font-size: 15px; text-decoration: none; color: #8d8d8d; background-color: #f4f4f4; padding: 5px 15px; border-radius: 5px;  background-image: url(../img/comment.png); background-position: 5px 5px; background-repeat: no-repeat; padding-left: 25px;}
+
+.paymentinfo .wallet                                  { min-height: 70px; padding: 10px; width: 100%;  background: url(../img/smallWallet.png) top left no-repeat; background-color: #c0e6a1;  color: #26AE60; font-size: 17px; padding-left: 75px; border-radius: 5px; box-sizing: border-box; font-weight: bold; padding-right: 30px; margin-bottom: 20px;}
+.paymentinfo .wallet    a                             { display: block; padding-top: 10px; font-size: 14px; color: #000; padding-bottom: 10px; text-decoration: none; font-weight: normal;}
+.paymentinfo .paymentmethod                           { margin-bottom: 15px;}
+.paymentinfo .paymentmethod a                         { display: block; padding: 10px 10px; font-size: 16px;  text-decoration: none; margin-bottom: 10px; color: #366b0b; padding-left: 50px; } 
+
+.paymentinfo .paymentmethod a.pwallet                  { background: url(../img/verysmallWallet.png) top left no-repeat;  background-color: #d2f4b7; background-position: 10px 5px;}
+.paymentinfo .paymentmethod a.pcc                      { background: url(../img/verysmallcc.png) top left no-repeat;  background-color: #d2f4b7; background-position: 10px 5px;}
+.paymentinfo .paymentmethod a.cod                      { background-color: #d2f4b7; background-position: 10px 5px;}
+
+.profileinfo div                                       { font-size: 14px; padding: 5px 0px;}
+.profileinfo input[type=text]                          { font-size: 14px; padding: 10px 5px; width: 100%; border: 1px solid #ececec; border-radius: 5px;}
+
+.generalinfo div                                       { font-size: 14px; padding: 5px 0px;}
+.generalinfo input[type=text]                          { font-size: 14px; padding: 10px 5px; width: 100%; border: 1px solid #ececec; border-radius: 5px;}
+
+.changepassword div                                       { font-size: 14px; padding: 5px 0px;}
+.changepassword input[type=password]                          { font-size: 14px; padding: 10px 5px; width: 100%; border: 1px solid #ececec; border-radius: 5px;}
+
+
+.total                                                { font-size: 25px; text-decoration: none; color: #fff; background-color: #71ba35; padding: 10px 15px; border-radius: 0px; position: fixed; bottom: 0px; width: 100%; box-sizing: border-box;}
+
+
+@media screen and (max-width:359px) {
+    .home img           { width: 100px;}
+    .home > div> a      { width: 150px; }
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+::-webkit-input-placeholder { color: #97df5b; }
+:-moz-placeholder { /* Firefox 18- */   color: #97df5b;  }
+::-moz-placeholder {  /* Firefox 19+ */   color: #97df5b;  }
+:-ms-input-placeholder {     color: #97df5b;  }
+
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+
+
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(232, 98, 86, 0.8) url(../img/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
